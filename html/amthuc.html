@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/LOGO.png" >
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,500&display=swap" rel="stylesheet"> -->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link href="../icon/fontawesome-free-6.2.0-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/amthuc.css">
+    <link rel="stylesheet" href="../font/Montserrat fontface/Montserrat-Font.css">
+    <link rel="stylesheet" type="text/css" href="../js/slick-1.8.1/slick/slick.css">
+    <script type="text/javascript" src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <title>Ẩm thực</title>
+</head>
+
+<body style="flex-direction: column;height: 100vh;">
+    <div class="width-tieuchuan">
+        <div id="nav">
+            <a href="../index.html" id="nav-logo"><img alt="Logo" src="../images/LOGO.png"></a>
+            <ol id="nav-list">
+                <a id="nav-noidedi" class="nav-items" href="../html/noidedi.html">NƠI ĐỂ ĐI</a>
+                <a id="nav-vanhoa" class="nav-items" href="../html/vanhoa.html">VĂN HOÁ</a>
+                <a id="nav-amthuc" class="nav-items active" href="../html/amthuc.html">ẨM THỰC</a>
+                <a id="nav-dichvu" class="nav-items" href="../html/dichvu.html">BOOKING</a>
+                <div  id="nav-meodulich_div" class="nav-items">
+                    <a id="nav-meodulich-title" href="../html/meodulich.html">MẸO DU LỊCH <i class="fa-solid fa-caret-down"></i></a>
+                    <ul id="nav-meodulich_list" >
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#1">Mẹo Cần Khi Đi Du Lịch</a></li>
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#2">Mẹo Du Lịch An Toàn</a></li>
+                    </ul>
+                </div>
+            </ol>
+            <div id="nav-search"><i id="nav-search_icon"class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Tìm Kiếm" autocomplete="no" ></div>
+        </div>
+        </div>
+    <div id="background">
+        <img id="background-image" class="background-image" src="../images/backgroundamthuc.png">
+        <div id="backgroundoverlay"></div>
+    </div>
+    <div id="container">
+        <div id="container-body">
+            <div id="container-body_info">
+                <div id="body-info_text">
+                <h2>Ẩm Thực Việt Nam</h2><p>Có lịch sử lâu đời và vị trí địa lý khác biệt nên mỗi vùng miền trên lãnh thổ hình chữ S luôn có những món ăn mang hương vị riêng, không thể hòa lẫn. Từ đó góp phần tạo nên nền ẩm thực Việt Nam đa sắc, thu hút mọi thực khách trong và ngoài nước.</p>
+            </div>
+            </div>
+            <div id="container-body_list">
+                <div id="container-body_imglist">
+                <img src="../images/thumpamthuc.png" alt="AMTHUCVIETNAM">
+                <img src="../images/thumppho.png" alt="PHO">
+                <img src="../images/thumpbanhmi.png" alt="BANHMI">
+                <img src="../images/thumpbanhxeo.png" alt="BANHXEO">
+                <img src="../images/thumpcaolau.png" alt="CAOLAU">
+                <img src="../images/thumpbokho.png" alt="BOKHO">
+                <img src="../images/thumpmiquang.png" alt="MIQUANG">
+                <img src="../images/thumpbunbohue.png" alt="BUNBOHUE">
+                </div>
+            </div>
+        </div>
+        <div id="nav-footer">
+            <a id="nav-footer_link">&copy; Được thiết kế bởi nhóm 3</a>
+            <ul id="nav-footer_list">
+                <li><a href="mailto:n20dcpt021@student.ptithcm.edu.vn">Đỗ Hùng Hảo-N20DCPT021</a></li>
+                <li><a href="mailto:n20dcpt036@student.ptithcm.edu.vn">Lê Thị Cẩm Ly-N20DCQPT036</a></li>
+                <li><a href="mailto:n20dcpt041@student.ptithcm.edu.vn">Đặng.N Uyển My-N20DCQPT041</a></li>
+                <li><a href="mailto:n20dcpt043@student.ptithcm.edu.vn">Lê Nhật Nam-N20DCQPT043</a></li>
+                <li><a href="mailto:n20dcpt062@student.ptithcm.edu.vn">T.L Ngọc Quyền-N20DCQPT062</a></li>
+            </ul>
+       </div>
+    </div>
+</body>
+<script src="../js/hidden_nav.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        $('#container-body_imglist').slick({
+            slidesToShow: 3,
+focusOnSelect:true,
+slidesToScroll: 1,
+autoplay: true,
+variableWidth:true, 
+centerMode: true,
+centerPadding: '0',
+autoplaySpeed: 3000,
+dots:true,
+arrows:false,
+        });    
+        $('.slick-dots').children().click(function(e){
+            if($(this).index()==0){
+                $('#background-image').attr("src","../images/backgroundamthuc.png");
+                $('#body-info_text').html(" <h2>Ẩm Thực Việt Nam</h2>                <p>Có lịch sử lâu đời và vị trí địa lý khác biệt nên mỗi vùng miền trên lãnh thổ hình chữ S luôn có những món ăn mang hương vị riêng, không thể hòa lẫn. Từ đó góp phần tạo nên nền ẩm thực Việt Nam đa sắc, thu hút mọi thực khách trong và ngoài nước.</p>")
+            }
+            if($(this).index()==1){
+                $('#background-image').attr("src","../images/backgroundpho.png");
+                $('#body-info_text').html(" <h2>Phở</h2>                <p>Việt Nam từ lâu đã nổi tiếng với món phở truyền thống. Đây là món ăn được nấu rất công phu với phần nước dùng được hầm từ xương bò, quế, hồi,… trong 6-8 tiếng, nhờ đó mà nước dùng sẽ ngọt thanh tự nhiên. Sự kết hợp với bánh phở mềm, rau tươi ngon cũng mang đến một món ăn phù hợp với mọi lứa tuổi.Phở là món ăn Việt được nhiều báo chí nước ngoài ca ngợi. Đây được xem là món ăn nổi tiếng và hấp dẫn nhất nền ẩm thực Việt Nam trong mắt của nhiều du khách quốc tế.</p>")
+            }
+            if($(this).index()==2){
+                $('#background-image').attr("src","../images/backgroundbanhmi.png");
+                $('#body-info_text').html(" <h2>Bánh mì</h2>                <p>Bánh mì đã trở thành món ăn đường phố Việt Nam nổi tiếng thế giới. Với sự kết hợp cực kỳ hài hòa giữa phần nhân mềm ẩm, đậm đà với vỏ bánh mỳ thơm ngon giòn rụm, món ăn này nhanh chóng chiếm được sự yêu thích của thực khách trên khắp thế giới. Không chỉ ngon mà giá cả cũng rất rẻ, phù hợp cho một bữa ăn sáng vội vàng. Bạn có thể ăn kèm với đa dạng các món khác như: xúc xích, trứng, chả cá, pate, thịt heo quay,...</p>")
+            }
+            if($(this).index()==3){
+                $('#background-image').attr("src","../images/backgroundbanhxeo.png");
+                $('#body-info_text').html(" <h2>Bánh xèo</h2>                <p>Bánh xèo là món ăn phủ rộng trên mọi miền tại Việt Nam, món ăn này thường xuất hiện ở Nam Trung Bộ và các tỉnh miền Nam. Bánh xèo ở từng vùng miền sẽ khác nhau về màu sắc, kích cỡ, loại nhân bên trong, nước chấm. Điểm chung của tất cả các loại bánh xèo tại Việt Nam là được làm từ bột gạo tẻ pha loãng, sau đó được tráng mỏng trên chảo và chiên giòn.</p>")
+            }
+            if($(this).index()==4){
+                $('#background-image').attr("src","../images/backgroundcaolau.png");
+                $('#body-info_text').html(" <h2>Cao Lầu</h2>                <p>Cao lầu là món ăn đã có từ thế kỳ 17 nổi tiếng là đặc sản của Hội An. Sợi cao lầu có bản to, trộn với nước sốt và ăn kèm với thịt xíu, da heo chiên giòn rau sống. Món ăn này khá giống với mì quảng nhưng có phần nước sốt đậm đà hơn. Cao lầu từ lâu đã trở thành món đặc sản nổi tiếng mà bạn nhất định phải thử khi đến Hội An. Ở phố cổ có khá nhiều nơi bán cao lầu từ nhà hàng, quán ăn lớn đến các gánh hàng rong.</p>")
+            }
+            if($(this).index()==5){
+                $('#background-image').attr("src","../images/backgroundbokho.png");
+                $('#body-info_text').html(" <h2>Bò Kho</h2>                <p>Bò kho là một món ăn chế biến từ thịt bò với phương pháp kho, có xuất xứ ở miền Nam Việt Nam. Món này được nhiều người ưa thích. Nguyên bản món Bò kho được người miền Nam Việt Nam dùng kèm với nhiều loại rau mùi, để tăng hương vị món ăn. Tuy có tên gọi là bò kho nhưng cách thức chế biến chủ đạo của món ăn lại là hầm, hình thức kho được dùng để tẩm ướp và làm săn chắc thịt bò trước khi hầm. Món này cũng nổi tiếng bên ngoài Việt Nam</p>")
+            }
+            if($(this).index()==6){
+                $('#background-image').attr("src","../images/backgroundmiquang.png");
+                $('#body-info_text').html(" <h2>Mì Quảng</h2>                <p>Món Mì Quảng chính là đặc sản nổi tiếng của tỉnh Quảng Nam, tuy nhiên lại là món quốc dân được ưa chuộng trên khắp cả nước. Nguyên liệu để làm ra một tô mì Quảng bao gồm: sợi mì vàng, bánh đa, đậu phộng, thịt lợn quay giòn và ăm kèm theo nước dùng có màu vàng nghệ đặc sánh.</p>")
+            }
+            if($(this).index()==7){
+                $('#background-image').attr("src","../images/backgroundbunbohue.png");
+                $('#body-info_text').html(" <h2>Bún Bò Huế</h2>                <p>Nằm trong số những món ăn ngon và đậm đà hương vị nhất của ẩm thực Việt Nam, bún bò Huế rất được ưa chuộng và điều thú vị là món ăn này có thể được ăn vào mọi buổi từ sáng đến chiều tối.Bún bò Huế là một đặc sản của ẩm thực Huế, tùy là bún bò nhưng ngoài thịt bò còn có thịt heo. Hương vị đặc biệt của món ăn này chủ yếu là ở vị cay nồng, mùi sả đặc trưng  của nước lèo. Vốn là một hương vị Huế không lẫn vào đâu được và chính điều đó khiến người ăn cứ nhớ mãi về món ăn này.</p>")
+            }
+    })
+        $('.slick-list').mousemove(function(){
+            if($('.slick-dots').children('.slick-active').index()==0){
+                $('#background-image').attr("src","../images/backgroundamthuc.png");
+                $('#body-info_text').html(" <h2>Ẩm thực Việt Nam</h2>                <p>Có lịch sử lâu đời và vị trí địa lý khác biệt nên mỗi vùng miền trên lãnh thổ hình chữ S luôn có những món ăn mang hương vị riêng, không thể hòa lẫn. Từ đó góp phần tạo nên nền ẩm thực Việt Nam đa sắc, thu hút mọi thực khách trong và ngoài nước.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==1){
+                $('#background-image').attr("src","../images/backgroundpho.png");
+                $('#body-info_text').html(" <h2>Phở</h2>                <p>Việt Nam từ lâu đã nổi tiếng với món phở truyền thống. Đây là món ăn được nấu rất công phu với phần nước dùng được hầm từ xương bò, quế, hồi,… trong 6-8 tiếng, nhờ đó mà nước dùng sẽ ngọt thanh tự nhiên. Sự kết hợp với bánh phở mềm, rau tươi ngon cũng mang đến một món ăn phù hợp với mọi lứa tuổi.Phở là món ăn Việt được nhiều báo chí nước ngoài ca ngợi. Đây được xem là món ăn nổi tiếng và hấp dẫn nhất nền ẩm thực Việt Nam trong mắt của nhiều du khách quốc tế.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==2){
+                $('#background-image').attr("src","../images/backgroundbanhmi.png");
+                $('#body-info_text').html(" <h2>Bánh mì</h2>                <p>Bánh mì đã trở thành món ăn đường phố Việt Nam nổi tiếng thế giới. Với sự kết hợp cực kỳ hài hòa giữa phần nhân mềm ẩm, đậm đà với vỏ bánh mỳ thơm ngon giòn rụm, món ăn này nhanh chóng chiếm được sự yêu thích của thực khách trên khắp thế giới. Không chỉ ngon mà giá cả cũng rất rẻ, phù hợp cho một bữa ăn sáng vội vàng. Bạn có thể ăn kèm với đa dạng các món khác như: xúc xích, trứng, chả cá, pate, thịt heo quay,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==3){
+                $('#background-image').attr("src","../images/backgroundbanhxeo.png");
+                $('#body-info_text').html(" <h2>Bánh xèo</h2>                <p>Bánh xèo là món ăn phủ rộng trên mọi miền tại Việt Nam, món ăn này thường xuất hiện ở Nam Trung Bộ và các tỉnh miền Nam. Bánh xèo ở từng vùng miền sẽ khác nhau về màu sắc, kích cỡ, loại nhân bên trong, nước chấm. Điểm chung của tất cả các loại bánh xèo tại Việt Nam là được làm từ bột gạo tẻ pha loãng, sau đó được tráng mỏng trên chảo và chiên giòn.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==4){
+                $('#background-image').attr("src","../images/backgroundcaolau.png");
+                $('#body-info_text').html(" <h2>Cao Lầu</h2>                <p>Cao lầu là món ăn đã có từ thế kỳ 17 nổi tiếng là đặc sản của Hội An. Sợi cao lầu có bản to, trộn với nước sốt và ăn kèm với thịt xíu, da heo chiên giòn rau sống. Món ăn này khá giống với mì quảng nhưng có phần nước sốt đậm đà hơn. Cao lầu từ lâu đã trở thành món đặc sản nổi tiếng mà bạn nhất định phải thử khi đến Hội An. Ở phố cổ có khá nhiều nơi bán cao lầu từ nhà hàng, quán ăn lớn đến các gánh hàng rong.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==5){  $('#background-image').attr("src","../images/backgroundbokho.png");
+                $('#body-info_text').html(" <h2>Bò kho</h2>                <p>Bò kho là một món ăn chế biến từ thịt bò với phương pháp kho, có xuất xứ ở miền Nam Việt Nam. Món này được nhiều người ưa thích. Nguyên bản món Bò kho được người miền Nam Việt Nam dùng kèm với nhiều loại rau mùi, để tăng hương vị món ăn. Tuy có tên gọi là bò kho nhưng cách thức chế biến chủ đạo của món ăn lại là hầm, hình thức kho được dùng để tẩm ướp và làm săn chắc thịt bò trước khi hầm. Món này cũng nổi tiếng bên ngoài Việt Nam</p>") 
+            }
+            if($('.slick-dots').children('.slick-active').index()==6){  $('#background-image').attr("src","../images/backgroundmiquang.png");
+                $('#body-info_text').html(" <h2>Mì Quảng</h2>                <p>Món Mì Quảng chính là đặc sản nổi tiếng của tỉnh Quảng Nam, tuy nhiên lại là món quốc dân được ưa chuộng trên khắp cả nước. Nguyên liệu để làm ra một tô mì Quảng bao gồm: sợi mì vàng, bánh đa, đậu phộng, thịt lợn quay giòn và ăm kèm theo nước dùng có màu vàng nghệ đặc sánh.</p>") 
+            }
+            if($('.slick-dots').children('.slick-active').index()==7){  $('#background-image').attr("src","../images/backgroundbunbohue.png");
+                $('#body-info_text').html(" <h2>Bún Bò Huế</h2>                <p>Nằm trong số những món ăn ngon và đậm đà hương vị nhất của ẩm thực Việt Nam, bún bò Huế rất được ưa chuộng và điều thú vị là món ăn này có thể được ăn vào mọi buổi từ sáng đến chiều tối. Bún bò Huế là một đặc sản của ẩm thực Huế, tùy là bún bò nhưng ngoài thịt bò còn có thịt heo. Hương vị đặc biệt của món ăn này chủ yếu là ở vị cay nồng, mùi sả đặc trưng  của nước lèo. Vốn là một hương vị Huế không lẫn vào đâu được và chính điều đó khiến người ăn cứ nhớ mãi về món ăn này.</p>") 
+
+    }})
+    function checkbackground(){
+        if($('.slick-dots').children('.slick-active').index()==0){
+                $('#background-image').attr("src","../images/backgroundamthuc.png");
+                $('#body-info_text').html(" <h2>Ẩm thực Việt Nam</h2>                <p>Có lịch sử lâu đời và vị trí địa lý khác biệt nên mỗi vùng miền trên lãnh thổ hình chữ S luôn có những món ăn mang hương vị riêng, không thể hòa lẫn. Từ đó góp phần tạo nên nền ẩm thực Việt Nam đa sắc, thu hút mọi thực khách trong và ngoài nước.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==1){
+                $('#background-image').attr("src","../images/backgroundpho.png");
+                $('#body-info_text').html(" <h2>Phở</h2>                <p>Việt Nam từ lâu đã nổi tiếng với món phở truyền thống. Đây là món ăn được nấu rất công phu với phần nước dùng được hầm từ xương bò, quế, hồi,… trong 6-8 tiếng, nhờ đó mà nước dùng sẽ ngọt thanh tự nhiên. Sự kết hợp với bánh phở mềm, rau tươi ngon cũng mang đến một món ăn phù hợp với mọi lứa tuổi.Phở là món ăn Việt được nhiều báo chí nước ngoài ca ngợi. Đây được xem là món ăn nổi tiếng và hấp dẫn nhất nền ẩm thực Việt Nam trong mắt của nhiều du khách quốc tế.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==2){
+                $('#background-image').attr("src","../images/backgroundbanhmi.png");
+                $('#body-info_text').html(" <h2>Bánh mì</h2>                <p>Bánh mì đã trở thành món ăn đường phố Việt Nam nổi tiếng thế giới. Với sự kết hợp cực kỳ hài hòa giữa phần nhân mềm ẩm, đậm đà với vỏ bánh mỳ thơm ngon giòn rụm, món ăn này nhanh chóng chiếm được sự yêu thích của thực khách trên khắp thế giới. Không chỉ ngon mà giá cả cũng rất rẻ, phù hợp cho một bữa ăn sáng vội vàng. Bạn có thể ăn kèm với đa dạng các món khác như: xúc xích, trứng, chả cá, pate, thịt heo quay,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==3){
+                $('#background-image').attr("src","../images/backgroundbanhxeo.png");
+                $('#body-info_text').html(" <h2>Bánh xèo</h2>                <p>Bánh xèo là món ăn phủ rộng trên mọi miền tại Việt Nam, món ăn này thường xuất hiện ở Nam Trung Bộ và các tỉnh miền Nam. Bánh xèo ở từng vùng miền sẽ khác nhau về màu sắc, kích cỡ, loại nhân bên trong, nước chấm. Điểm chung của tất cả các loại bánh xèo tại Việt Nam là được làm từ bột gạo tẻ pha loãng, sau đó được tráng mỏng trên chảo và chiên giòn.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==4){
+                $('#background-image').attr("src","../images/backgroundcaolau.png");
+                $('#body-info_text').html(" <h2>Cao Lầu</h2>                <p>Cao lầu là món ăn đã có từ thế kỳ 17 nổi tiếng là đặc sản của Hội An. Sợi cao lầu có bản to, trộn với nước sốt và ăn kèm với thịt xíu, da heo chiên giòn rau sống. Món ăn này khá giống với mì quảng nhưng có phần nước sốt đậm đà hơn. Cao lầu từ lâu đã trở thành món đặc sản nổi tiếng mà bạn nhất định phải thử khi đến Hội An. Ở phố cổ có khá nhiều nơi bán cao lầu từ nhà hàng, quán ăn lớn đến các gánh hàng rong.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==5){  $('#background-image').attr("src","../images/backgroundbokho.png");
+                $('#body-info_text').html(" <h2>Bò kho</h2>                <p>Bò kho là một món ăn chế biến từ thịt bò với phương pháp kho, có xuất xứ ở miền Nam Việt Nam. Món này được nhiều người ưa thích. Nguyên bản món Bò kho được người miền Nam Việt Nam dùng kèm với nhiều loại rau mùi, để tăng hương vị món ăn. Tuy có tên gọi là bò kho nhưng cách thức chế biến chủ đạo của món ăn lại là hầm, hình thức kho được dùng để tẩm ướp và làm săn chắc thịt bò trước khi hầm. Món này cũng nổi tiếng bên ngoài Việt Nam</p>") 
+            }
+            if($('.slick-dots').children('.slick-active').index()==6){  $('#background-image').attr("src","../images/backgroundmiquang.png");
+                $('#body-info_text').html(" <h2>Mì Quảng</h2>                <p>Món Mì Quảng chính là đặc sản nổi tiếng của tỉnh Quảng Nam, tuy nhiên lại là món quốc dân được ưa chuộng trên khắp cả nước. Nguyên liệu để làm ra một tô mì Quảng bao gồm: sợi mì vàng, bánh đa, đậu phộng, thịt lợn quay giòn và ăm kèm theo nước dùng có màu vàng nghệ đặc sánh.</p>") 
+            }
+            if($('.slick-dots').children('.slick-active').index()==7){  $('#background-image').attr("src","../images/backgroundbunbohue.png");
+                $('#body-info_text').html(" <h2>Bún Bò Huế</h2>                <p>Nằm trong số những món ăn ngon và đậm đà hương vị nhất của ẩm thực Việt Nam, bún bò Huế rất được ưa chuộng và điều thú vị là món ăn này có thể được ăn vào mọi buổi từ sáng đến chiều tối. Bún bò Huế là một đặc sản của ẩm thực Huế, tùy là bún bò nhưng ngoài thịt bò còn có thịt heo. Hương vị đặc biệt của món ăn này chủ yếu là ở vị cay nồng, mùi sả đặc trưng  của nước lèo. Vốn là một hương vị Huế không lẫn vào đâu được và chính điều đó khiến người ăn cứ nhớ mãi về món ăn này.</p>") 
+
+    }
+    }
+    setInterval(checkbackground,200)
+})
+</script>
+</html> 

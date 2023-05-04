@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/LOGO.png" >
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,500&display=swap" rel="stylesheet"> -->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link href="../icon/fontawesome-free-6.2.0-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/noidedi.css">
+    <link rel="stylesheet" href="../font/Montserrat fontface/Montserrat-Font.css">
+    <link rel="stylesheet" type="text/css" href="../js/slick-1.8.1/slick/slick.css">
+    <script type="text/javascript" src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <title>Nơi Để Đi</title>
+</head>
+
+<body style="flex-direction: column;height: 100vh;">
+    <div class="width-tieuchuan">
+        <div id="nav">
+            <a href="../index.html" id="nav-logo"><img alt="Logo" src="../images/LOGO.png"></a>
+            <ol id="nav-list">
+                <a id="nav-noidedi" class="nav-items active" href="../html/noidedi.html">NƠI ĐỂ ĐI</a>
+                <a id="nav-vanhoa" class="nav-items" href="../html/vanhoa.html">VĂN HOÁ</a>
+                <a id="nav-amthuc" class="nav-items" href="../html/amthuc.html">ẨM THỰC</a>
+                <a id="nav-dichvu" class="nav-items" href="../html/dichvu.html">BOOKING</a>
+                <div  id="nav-meodulich_div" class="nav-items ">
+                    <a id="nav-meodulich-title" href="../html/meodulich.html">MẸO DU LỊCH <i class="fa-solid fa-caret-down"></i></a>
+                    <ul id="nav-meodulich_list" >
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#1">Mẹo Cần Khi Đi Du Lịch</a></li>
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#2">Mẹo Du Lịch An Toàn</a></li>
+                    </ul>
+                </div>
+            </ol>
+            <div id="nav-search"><i id="nav-search_icon"class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Tìm Kiếm" autocomplete="no" ></div>
+        </div>
+        </div>
+    <div id="background">
+        <img id="background-image" class="background-image" src="../images/Backgroundhanoi.png">
+        <div id="backgroundoverlay"></div>
+    </div>
+    <div id="container">
+        <div id="container-body">
+            <div id="container-body_info">
+                <div id="body-info_text">
+                <h2>Hà Nội</h2><p>Là một trong những nơi mà bất kỳ người Việt Nam nào cũng muốn được đặt chân đến một lần trong đời. Du lịch Thủ đô, du khách sẽ được ghé thăm những điểm tham quan nổi tiếng như Quảng trường Ba Đình, Văn Miếu Quốc Tử Giám,... hay chiêm ngưỡng cảnh đẹp Hồ Tây, Hồ Gươm, Hoàng thành Thăng Long,... Bên cạnh đó, du khách còn được nếm thử nhiều món ngon đặc sắc như cốm làng Vòng, bún chả, phở, nem chua rán,...</p>
+            </div>
+            </div>
+            <div id="container-body_list">
+                <div id="container-body_imglist">
+                <img src="../images/THUMHANOI.png" alt="HANOI">
+                <img src="../images/THUMhagiang.png" alt="HAGIANG">
+                <img src="../images/THUMDANANG.png" alt="DANANG">
+                <img src="../images/THUMQUANGBINH.png" alt="QUANGBINH">
+                <img src="../images/THUMTPHCM.png" alt="TPHCM">
+                <img src="../images/THUMCANTHO.png" alt="CANTHO">
+                </div>
+            </div>
+        </div>
+        <div id="nav-footer">
+            <a id="nav-footer_link">&copy; Được thiết kế bởi nhóm 3</a>
+            <ul id="nav-footer_list">
+                <li><a href="mailto:n20dcpt021@student.ptithcm.edu.vn">Đỗ Hùng Hảo-N20DCPT021</a></li>
+                <li><a href="mailto:n20dcpt036@student.ptithcm.edu.vn">Lê Thị Cẩm Ly-N20DCQPT036</a></li>
+                <li><a href="mailto:n20dcpt041@student.ptithcm.edu.vn">Đặng.N Uyển My-N20DCQPT041</a></li>
+                <li><a href="mailto:n20dcpt043@student.ptithcm.edu.vn">Lê Nhật Nam-N20DCQPT043</a></li>
+                <li><a href="mailto:n20dcpt062@student.ptithcm.edu.vn">T.L Ngọc Quyền-N20DCQPT062</a></li>
+            </ul>
+       </div>
+    </div>
+</body>
+<script src="../js/hidden_nav.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#container-body_imglist').slick({
+focusOnSelect:true,
+slidesToScroll: 1,
+autoplay: true,
+variableWidth:true, 
+centerMode: true,
+centerPadding: '0',
+autoplaySpeed: 3000,
+dots:true,
+arrows:false,
+        });    
+        $('.slick-dots').children().click(function(e){
+            if($(this).index()==0){
+                $('#background-image').attr("src","../images/Backgroundhanoi.png");
+                $('#body-info_text').html(" <h2>Hà Nội</h2>                <p>Là một trong những nơi mà bất kỳ người Việt Nam nào cũng muốn được đặt chân đến một lần trong đời. Du lịch Thủ đô, du khách sẽ được ghé thăm những điểm tham quan nổi tiếng như Quảng trường Ba Đình, Văn Miếu Quốc Tử Giám,... hay chiêm ngưỡng cảnh đẹp Hồ Tây, Hồ Gươm, Hoàng thành Thăng Long,... Bên cạnh đó, du khách còn được nếm thử nhiều món ngon đặc sắc như cốm làng Vòng, bún chả, phở, nem chua rán,...</p>")
+            }
+            if($(this).index()==1){
+                $('#background-image').attr("src","../images/backgroundhagiang.png");
+                $('#body-info_text').html(" <h2>Hà Giang</h2>                <p>Thu hút du khách bởi vẻ đẹp thiên nhiên hoang sơ, bình dị, yên bình. Các điểm du lịch nổi tiếng mà bạn nhất định phải ghé khi đến Hà Giang là Hoàng Su Phì, đèo Mã Pí Lèng, cao nguyên đá Đồng Văn, Phó Bảng, cột cờ Lũng Cú, động Lùng Khúy, cửa khẩu Săm Pun, hồ Noong, thung lũng Sủng Là, phố cổ Đồng Văn,... Cùng với cảnh đẹp là nhiều món ăn mang hương vị núi rừng hấp dẫn như cháo ấu tẩu, thắng cố, rêu nướng, bánh cuốn trứng.</p>")
+            }
+            if($(this).index()==2){
+                $('#background-image').attr("src","../images/Backgrounddanang.png");
+                $('#body-info_text').html(" <h2>Đà Nẵng</h2>                <p>Là thành phố của nhiều cây cầu đẹp như cầu sông Hàn, cầu Rồng, cầu Thuận Phước, cầu tình yêu; những bãi biển hoang sơ, thơ mộng như biển Mỹ Khê, biển Non Nước, biển Xuân Thiều,... cùng nhiều thắng cảnh đẹp khác như núi Ngũ Hành Sơn, bán đảo Sơn Trà, Ghềnh Bàng,... Không chỉ có cảnh đẹp, nơi đây còn níu chân du khách bởi nhiều món ăn  hấp dẫn như bún mắm nêm, bê thui, mì Quảng, cơm gà.</p>")
+            }
+            if($(this).index()==3){
+                $('#background-image').attr("src","../images/backgroundquangbinh.png");
+                $('#body-info_text').html(" <h2>Quảng Bình</h2>                <p>Là địa đến thú vị với bãi biển hoang sơ, hang động độc đáo, núi sông hùng vĩ cùng nhiều món đặc sản thơm ngon. Không những thế, khi tham quan Quảng Bình du khách còn sẽ được khám phá quần thể hang động Phong Nha - Kẻ Bàng, một trong những di sản thiên nhiên thế giới. Ngoài ra, du khách có thể đến tham quan Bãi biển Nhật Lệ, Bãi biển Bảo Ninh, Bãi Đá Nhảy,  Cồn cát Quang Phú, Đảo Yến, Đền thờ Thánh mẫu Liễu Hạnh và Núi Thần Đinh</p>")
+            }
+            if($(this).index()==4){
+                $('#background-image').attr("src","../images/backgroundtphcm.png");
+                $('#body-info_text').html(" <h2>TP. Hồ Chí Minh</h2>                <p>Là thành phố năng động, sầm uất bậc nhất. Đến với địa điểm du lịch Sài Gòn, du khách không chỉ được ngắm cảnh phố xá nhộn nhịp, đông vui mà còn được check in nhiều điểm vui chơi, tham quan nổi bật của thành phố như phố đi bộ Nguyễn Huệ, bến Nhà Rồng, Dinh Độc Lập,... Ngoài ra, du khách còn có cơ hội ghé thăm  các địa điểm du lịch gần Sài Gòn nổi tiếng như địa đạo Củ Chi, đảo Thạnh An, biển Long Hải,...</p>")
+            }
+            if($(this).index()==5){
+                $('#background-image').attr("src","../images/backgroundcantho.png");
+                $('#body-info_text').html(" <h2>Cần Thơ</h2>                <p>Là một trong những điểm du lịch miền Tây Nam Bộ hấp dẫn hàng đầu. Với các địa điểm nổi tiếng phải kể đến như  bến Ninh Kiều, chợ Đêm, đảo ngọt Cù Lao, nhà cổ Bình Thủy,... Cùng với đó là nhiều món ngon đậm đà hương vị miền sông nước như ốc nướng tiêu xanh, lẩu mắm, bún tôm khô Cái Răng,... Cảnh đẹp sông nước hữu tình, ẩm thực độc đáo cùng con người thân thiện, hiếu khách khiến Cần Thơ trở thành điểm đến hấp dẫn níu chân du khách. </p>")
+            }
+    })
+        $('.slick-list').mousemove(function(){
+            if($('.slick-dots').children('.slick-active').index()==0){
+                $('#background-image').attr("src","../images/Backgroundhanoi.png");
+                $('#body-info_text').html(" <h2>Hà Nội</h2>                <p>Là một trong những nơi mà bất kỳ người Việt Nam nào cũng muốn được đặt chân đến một lần trong đời. Du lịch Thủ đô, du khách sẽ được ghé thăm những điểm tham quan nổi tiếng như Quảng trường Ba Đình, Văn Miếu Quốc Tử Giám,... hay chiêm ngưỡng cảnh đẹp Hồ Tây, Hồ Gươm, Hoàng thành Thăng Long,... Bên cạnh đó, du khách còn được nếm thử nhiều món ngon đặc sắc như cốm làng Vòng, bún chả, phở, nem chua rán,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==1){
+                $('#background-image').attr("src","../images/backgroundhagiang.png");
+                $('#body-info_text').html(" <h2>Hà Giang</h2>                <p>Thu hút du khách bởi vẻ đẹp thiên nhiên hoang sơ, bình dị, yên bình. Các điểm du lịch nổi tiếng mà bạn nhất định phải ghé khi đến Hà Giang là Hoàng Su Phì, đèo Mã Pí Lèng, cao nguyên đá Đồng Văn, Phó Bảng, cột cờ Lũng Cú, động Lùng Khúy, cửa khẩu Săm Pun, hồ Noong, thung lũng Sủng Là, phố cổ Đồng Văn,... Cùng với cảnh đẹp là nhiều món ăn mang hương vị núi rừng hấp dẫn như cháo ấu tẩu, thắng cố, rêu nướng, bánh cuốn trứng.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==2){
+                $('#background-image').attr("src","../images/Backgrounddanang.png");
+                $('#body-info_text').html(" <h2>Đà Nẵng</h2>                <p>Là thành phố của nhiều cây cầu đẹp như cầu sông Hàn, cầu Rồng, cầu Thuận Phước, cầu tình yêu; những bãi biển hoang sơ, thơ mộng như biển Mỹ Khê, biển Non Nước, biển Xuân Thiều,... cùng nhiều thắng cảnh đẹp khác như núi Ngũ Hành Sơn, bán đảo Sơn Trà, Ghềnh Bàng,... Không chỉ có cảnh đẹp, nơi đây còn níu chân du khách bởi nhiều món ăn  hấp dẫn như bún mắm nêm, bê thui, mì Quảng, cơm gà.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==3){
+                $('#background-image').attr("src","../images/backgroundquangbinh.png");
+                $('#body-info_text').html(" <h2>Quảng Bình</h2>                <p>Là địa đến thú vị với bãi biển hoang sơ, hang động độc đáo, núi sông hùng vĩ cùng nhiều món đặc sản thơm ngon. Không những thế, khi tham quan Quảng Bình du khách còn sẽ được khám phá quần thể hang động Phong Nha - Kẻ Bàng, một trong những di sản thiên nhiên thế giới. Ngoài ra, du khách có thể đến tham quan Bãi biển Nhật Lệ, Bãi biển Bảo Ninh, Bãi Đá Nhảy,  Cồn cát Quang Phú, Đảo Yến, Đền thờ Thánh mẫu Liễu Hạnh và Núi Thần Đinh</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==4){
+                $('#background-image').attr("src","../images/backgroundtphcm.png");
+                $('#body-info_text').html(" <h2>TP. Hồ Chí Minh</h2>                <p>Là thành phố năng động, sầm uất bậc nhất. Đến với địa điểm du lịch Sài Gòn, du khách không chỉ được ngắm cảnh phố xá nhộn nhịp, đông vui mà còn được check in nhiều điểm vui chơi, tham quan nổi bật của thành phố như phố đi bộ Nguyễn Huệ, bến Nhà Rồng, Dinh Độc Lập,... Ngoài ra, du khách còn có cơ hội ghé thăm  các địa điểm du lịch gần Sài Gòn nổi tiếng như địa đạo Củ Chi, đảo Thạnh An, biển Long Hải,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==5){  $('#background-image').attr("src","../images/backgroundcantho.png");
+                $('#body-info_text').html(" <h2>Cần Thơ</h2>                <p>Là một trong những điểm du lịch miền Tây Nam Bộ hấp dẫn hàng đầu. Với các địa điểm nổi tiếng phải kể đến như  bến Ninh Kiều, chợ Đêm, đảo ngọt Cù Lao, nhà cổ Bình Thủy,... Cùng với đó là nhiều món ngon đậm đà hương vị miền sông nước như ốc nướng tiêu xanh, lẩu mắm, bún tôm khô Cái Răng,... Cảnh đẹp sông nước hữu tình, ẩm thực độc đáo cùng con người thân thiện, hiếu khách khiến Cần Thơ trở thành điểm đến hấp dẫn níu chân du khách. </p>")
+    }})
+
+    function checkbackground(){
+        if($('.slick-dots').children('.slick-active').index()==0){
+                $('#background-image').attr("src","../images/Backgroundhanoi.png");
+                $('#body-info_text').html(" <h2>Hà Nội</h2>                <p>Là một trong những nơi mà bất kỳ người Việt Nam nào cũng muốn được đặt chân đến một lần trong đời. Du lịch Thủ đô, du khách sẽ được ghé thăm những điểm tham quan nổi tiếng như Quảng trường Ba Đình, Văn Miếu Quốc Tử Giám,... hay chiêm ngưỡng cảnh đẹp Hồ Tây, Hồ Gươm, Hoàng thành Thăng Long,... Bên cạnh đó, du khách còn được nếm thử nhiều món ngon đặc sắc như cốm làng Vòng, bún chả, phở, nem chua rán,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==1){
+                $('#background-image').attr("src","../images/backgroundhagiang.png");
+                $('#body-info_text').html(" <h2>Hà Giang</h2>                <p>Thu hút du khách bởi vẻ đẹp thiên nhiên hoang sơ, bình dị, yên bình. Các điểm du lịch nổi tiếng mà bạn nhất định phải ghé khi đến Hà Giang là Hoàng Su Phì, đèo Mã Pí Lèng, cao nguyên đá Đồng Văn, Phó Bảng, cột cờ Lũng Cú, động Lùng Khúy, cửa khẩu Săm Pun, hồ Noong, thung lũng Sủng Là, phố cổ Đồng Văn,... Cùng với cảnh đẹp là nhiều món ăn mang hương vị núi rừng hấp dẫn như cháo ấu tẩu, thắng cố, rêu nướng, bánh cuốn trứng.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==2){
+                $('#background-image').attr("src","../images/Backgrounddanang.png");
+                $('#body-info_text').html(" <h2>Đà Nẵng</h2>                <p>Là thành phố của nhiều cây cầu đẹp như cầu sông Hàn, cầu Rồng, cầu Thuận Phước, cầu tình yêu; những bãi biển hoang sơ, thơ mộng như biển Mỹ Khê, biển Non Nước, biển Xuân Thiều,... cùng nhiều thắng cảnh đẹp khác như núi Ngũ Hành Sơn, bán đảo Sơn Trà, Ghềnh Bàng,... Không chỉ có cảnh đẹp, nơi đây còn níu chân du khách bởi nhiều món ăn  hấp dẫn như bún mắm nêm, bê thui, mì Quảng, cơm gà.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==3){
+                $('#background-image').attr("src","../images/backgroundquangbinh.png");
+                $('#body-info_text').html(" <h2>Quảng Bình</h2>                <p>Là địa đến thú vị với bãi biển hoang sơ, hang động độc đáo, núi sông hùng vĩ cùng nhiều món đặc sản thơm ngon. Không những thế, khi tham quan Quảng Bình du khách còn sẽ được khám phá quần thể hang động Phong Nha - Kẻ Bàng, một trong những di sản thiên nhiên thế giới. Ngoài ra, du khách có thể đến tham quan Bãi biển Nhật Lệ, Bãi biển Bảo Ninh, Bãi Đá Nhảy,  Cồn cát Quang Phú, Đảo Yến, Đền thờ Thánh mẫu Liễu Hạnh và Núi Thần Đinh</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==4){
+                $('#background-image').attr("src","../images/backgroundtphcm.png");
+                $('#body-info_text').html(" <h2>TP. Hồ Chí Minh</h2>                <p>Là thành phố năng động, sầm uất bậc nhất. Đến với địa điểm du lịch Sài Gòn, du khách không chỉ được ngắm cảnh phố xá nhộn nhịp, đông vui mà còn được check in nhiều điểm vui chơi, tham quan nổi bật của thành phố như phố đi bộ Nguyễn Huệ, bến Nhà Rồng, Dinh Độc Lập,... Ngoài ra, du khách còn có cơ hội ghé thăm  các địa điểm du lịch gần Sài Gòn nổi tiếng như địa đạo Củ Chi, đảo Thạnh An, biển Long Hải,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==5){  $('#background-image').attr("src","../images/backgroundcantho.png");
+                $('#body-info_text').html(" <h2>Cần Thơ</h2>                <p>Là một trong những điểm du lịch miền Tây Nam Bộ hấp dẫn hàng đầu. Với các địa điểm nổi tiếng phải kể đến như  bến Ninh Kiều, chợ Đêm, đảo ngọt Cù Lao, nhà cổ Bình Thủy,... Cùng với đó là nhiều món ngon đậm đà hương vị miền sông nước như ốc nướng tiêu xanh, lẩu mắm, bún tôm khô Cái Răng,... Cảnh đẹp sông nước hữu tình, ẩm thực độc đáo cùng con người thân thiện, hiếu khách khiến Cần Thơ trở thành điểm đến hấp dẫn níu chân du khách. </p>")
+    }
+    }
+    setInterval(checkbackground,200);
+})
+</script>
+</html> 

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/LOGO.png" >
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,500&display=swap" rel="stylesheet"> -->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link href="../icon/fontawesome-free-6.2.0-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/vanhoa.css">
+    <link rel="stylesheet" href="../font/Montserrat fontface/Montserrat-Font.css">
+    <link rel="stylesheet" type="text/css" href="../js/slick-1.8.1/slick/slick.css">
+    <script type="text/javascript" src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <title>Văn hoá</title>
+</head>
+
+<body style="flex-direction: column;height: 100vh;">
+    <div class="width-tieuchuan">
+        <div id="nav">
+            <a href="../index.html" id="nav-logo"><img alt="Logo" src="../images/LOGO.png"></a>
+            <ol id="nav-list">
+                <a id="nav-noidedi" class="nav-items" href="../html/noidedi.html">NƠI ĐỂ ĐI</a>
+                <a id="nav-vanhoa" class="nav-items active" href="../html/vanhoa.html">VĂN HOÁ</a>
+                <a id="nav-amthuc" class="nav-items" href="../html/amthuc.html">ẨM THỰC</a>
+                <a id="nav-dichvu" class="nav-items" href="../html/dichvu.html">BOOKING</a>
+                <div  id="nav-meodulich_div" class="nav-items">
+                    <a id="nav-meodulich-title" href="../html/meodulich.html">MẸO DU LỊCH <i class="fa-solid fa-caret-down"></i></a>
+                    <ul id="nav-meodulich_list" >
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#1">Mẹo Cần Khi Đi Du Lịch</a></li>
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#2">Mẹo Du Lịch An Toàn</a></li>
+                    </ul>
+                </div>
+            </ol>
+            <div id="nav-search"><i id="nav-search_icon"class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Tìm Kiếm" autocomplete="no" ></div>
+        </div>
+        </div>
+    <div id="background">
+        <img id="background-image" class="background-image" src="../images/backgroundvanhoa.png">
+        <div id="backgroundoverlay"></div>
+    </div>
+    <div id="container">
+        <div id="container-body">
+            <div id="container-body_info">
+                <div id="body-info_text">
+                <h2>Văn hoá Việt Nam</h2><p>54 dân tộc với những nền văn hóa phong phú và đa dạng trên tất cả các khía cạnh, có những phong tục đúng đắn, tốt đẹp từ lâu đời, có những lễ hội nhiều ý nghĩa sinh hoạt cộng đồng, những niềm tin bền vững trong tín ngưỡng, sự khoan dung trong tư tưởng giáo lý khác nhau của tôn giáo, 30 công viên quốc gia, 8 di sản vật thể, 13 di sản phi vật thể được UNESCO công nhận. Phong cảnh đa dạng của Việt Nam và sự phong phú của văn hóa làm cho nó trở thành một địa điểm đến hấp dẫn cho bất kỳ khách du lịch trong và ngoài nước.</p>
+            </div>
+            </div>
+            <div id="container-body_list">
+                <div id="container-body_imglist">
+                <img src="../images/thumpvanhoa.png" alt="VANHOA">
+                <img src="../images/thumpluanuoc.png" alt="LUANUOC">
+                <img src="../images/thumpaodai.png" alt="AODAI">
+                <img src="../images/thumpgomsu.png" alt="GOMSU">
+                <img src="../images/thumpchuaco.png" alt="CHUACO">
+                <img src="../images/thumpcahue.png" alt="CAHUE">
+                </div>
+            </div>
+        </div>
+        <div id="nav-footer">
+            <a id="nav-footer_link">&copy; Được thiết kế bởi nhóm 3</a>
+            <ul id="nav-footer_list">
+                <li>Đỗ Hùng Hảo-N20DCPT021</li>
+                <li>Lê Thị Cẩm Ly-N20DCQPT036</li>
+                <li>Đặng.N Uyển My-N20DCQPT041</li>
+                <li>Lê Nhật Nam-N20DCQPT043</li>
+                <li>T.L Ngọc Quyền-N20DCQPT062</li>
+            </ul>
+       </div>
+    </div>
+</body>
+<script src="../js/hidden_nav.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        $('#container-body_imglist').slick({
+            slidesToShow: 3,
+focusOnSelect:true,
+slidesToScroll: 1,
+autoplay: true,
+variableWidth:true, 
+centerMode: true,
+centerPadding: '0',
+autoplaySpeed: 3000,
+dots:true,
+arrows:false,
+        });    
+        $('.slick-dots').children().click(function(e){
+            if($(this).index()==0){
+                $('#background-image').attr("src","../images/backgroundvanhoa.png");
+                $('#body-info_text').html(" <h2>Văn hoá Việt Nam</h2>                <p>54 dân tộc với những nền văn hóa phong phú và đa dạng trên tất cả các khía cạnh, có những phong tục đúng đắn, tốt đẹp từ lâu đời, có những lễ hội nhiều ý nghĩa sinh hoạt cộng đồng, những niềm tin bền vững trong tín ngưỡng, sự khoan dung trong tư tưởng giáo lý khác nhau của tôn giáo, 30 công viên quốc gia, 8 di sản vật thể, 13 di sản phi vật thể được UNESCO công nhận. Phong cảnh đa dạng của Việt Nam và sự phong phú của văn hóa làm cho nó trở thành một địa điểm đến hấp dẫn cho bất kỳ khách du lịch trong và ngoài nước.</p>")
+            }
+            if($(this).index()==1){
+                $('#background-image').attr("src","../images/backgroundluanuoc.png");
+                $('#body-info_text').html(" <h2>Nông Nghiệp Trồng Lúa Nước</h2>                <p>Người Việt Nam đã gắn bó với cây lúa từ thuở sơ khai khi dân ta còn sử dụng những lưỡi cày bằng đồng để trồng trọt cho đến thế kỉ XXI hiện đại khi chúng ta đã bắt đầu áp dụng công nghệ hiện đại vào nghề trồng lúa nước. Chính vì vậy, nghề trồng lúa nước đã đi vào cuộc sống người dân ta, trở thành một phần trong cuộc sống của người Việt, đặc biệt là yếu tố trong văn hóa như tín ngưỡng, ngôn ngữ, tục lệ,...</p>")
+            }
+            if($(this).index()==2){
+                $('#background-image').attr("src","../images/backgroundaodai.png");
+                $('#body-info_text').html(" <h2>Tà Áo dài Việt Nam</h2>                <p>Áo dài Việt Nam với giá trị văn hóa, bản sắc thể hiện rõ nét về hình ảnh người phụ nữ Việt Nam. Qua nhiều thời kỳ phát triển, những tà áo dài không ngừng biến đổi trong đời sống đương đại, nhưng vẫn luôn khẳng định giá trị truyền thống, khơi dậy niềm tự hào, tôn lên vẻ đẹp thanh lịch, dịu dàng của người phụ nữ Việt Nam.</p>")
+            }
+            if($(this).index()==3){
+                $('#background-image').attr("src","../images/backgroundgomsu.png");
+                $('#body-info_text').html(" <h2>Gớm Sứ Bát Tràng</h2>                <p>Lưu giữ giá trị văn hóa dân tộc không những góp phần mang lại sự thay đổi về kinh tế cho người dân nơi đây. Còn là sự tiếp nối nhiều thế hệ qua thời gian giữ gìn nghề cổ qua những sản phẩm gốm sứ. Sự đa dạng của những sản phẩm đó bằng nhiều hình thức, con đường khác nhau vẫn luôn góp phần tạo nên sức sống văn hóa của một quốc gia và mang đến những ý nghĩa giáo dục truyền thống sâu sắc. Qua bàn tay khéo léo của người nghệ nhân đã tạo ra những sản phẩm làm từ gốm men rạn, men hoa lam hay men ngọc,… Tất cả đều độc đáo và có những dấu ấn riêng biệt.</p>")
+            }
+            if($(this).index()==4){
+                $('#background-image').attr("src","../images/backgroundchuaco.png");
+                $('#body-info_text').html(" <h2>Ngôi chùa cổ</h2>                <p>Chùa cổ người Việt ngày nay ngoài vai trò là nơi đón nhận nhu cầu tín ngưỡng, tâm linh của đông đảo Nhân dân mà còn đóng một số chức năng vai trò rất quan trọng khác như là điểm đến giúp cho ngành du lịch phát triển, tạo ra việc làm, thu nhập của bộ phận Nhân dân sống quanh khu di tích. Bên cạnh đó mỗi ngôi chùa cổ là một bảo tàng thu nhỏ để gìn giữ các giá trị văn hóa vật thể và phi vật thể quý, một không gian hội tụ bảo tồn những loại cây, hoa quý với môi trường trong lành, tĩnh mịch, không ồn ào.</p>")
+            }
+            if($(this).index()==5){
+                $('#background-image').attr("src","../images/backgroundcahue.png");
+                $('#body-info_text').html(" <h2>Ca Huế</h2>                <p>Ca Huế được phát sinh vào khoảng thế kỷ thứ XVII, trở thành thú chơi tao nhã của các hoàng thân quốc thích, gia đình danh gia vọng tộc trong suốt thời gian dài khi Huế là thủ phủ xứ Đàng Trong, sau đó là kinh đô của cả nước dưới triều Nguyễn, đạt đến đỉnh cao từ thời Minh Mạng (1820-1840) đến thời Tự Đức (1848-1883).Đây là một trong ba thể loại nhạc thính phòng đạt trình độ phát triển bậc nhất trong kho tàng âm nhạc truyền thống Việt Nam, đứng thứ hai về bề dày lịch sử, và là thể loại duy nhất ra đời trong chốn cung đình. </p>")
+            }
+    })
+        $('.slick-list').mousemove(function(){
+            if($('.slick-dots').children('.slick-active').index()==0){
+                $('#background-image').attr("src","../images/backgroundvanhoa.png");
+                $('#body-info_text').html(" <h2>Văn hoá Việt Nam</h2>                <p>54 dân tộc với những nền văn hóa phong phú và đa dạng trên tất cả các khía cạnh, có những phong tục đúng đắn, tốt đẹp từ lâu đời, có những lễ hội nhiều ý nghĩa sinh hoạt cộng đồng, những niềm tin bền vững trong tín ngưỡng, sự khoan dung trong tư tưởng giáo lý khác nhau của tôn giáo, 30 công viên quốc gia, 8 di sản vật thể, 13 di sản phi vật thể được UNESCO công nhận.Phong cảnh đa dạng của Việt Nam và sự phong phú của văn hóa làm cho nó trở thành một địa điểm đến hấp dẫn cho bất kỳ khách du lịch trong và ngoài nước.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==1){
+                $('#background-image').attr("src","../images/backgroundluanuoc.png");
+                $('#body-info_text').html(" <h2>Nông Nghiệp Trồng Lúa Nước</h2>                <p>Người Việt Nam đã gắn bó với cây lúa từ thuở sơ khai khi dân ta còn sử dụng những lưỡi cày bằng đồng để trồng trọt cho đến thế kỉ XXI hiện đại khi chúng ta đã bắt đầu áp dụng công nghệ hiện đại vào nghề trồng lúa nước. Chính vì vậy, nghề trồng lúa nước đã đi vào cuộc sống người dân ta, trở thành một phần trong cuộc sống của người Việt, đặc biệt là yếu tố trong văn hóa như tín ngưỡng, ngôn ngữ, tục lệ,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==2){
+                $('#background-image').attr("src","../images/backgroundaodai.png");
+                $('#body-info_text').html(" <h2>Tà Áo dài Việt Nam</h2>                <p>Áo dài Việt Nam với giá trị văn hóa, bản sắc thể hiện rõ nét về hình ảnh người phụ nữ Việt Nam. Qua nhiều thời kỳ phát triển, những tà áo dài không ngừng biến đổi trong đời sống đương đại, nhưng vẫn luôn khẳng định giá trị truyền thống, khơi dậy niềm tự hào, tôn lên vẻ đẹp thanh lịch, dịu dàng của người phụ nữ Việt Nam.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==3){
+                $('#background-image').attr("src","../images/backgroundgomsu.png");
+                $('#body-info_text').html(" <h2>Gớm Sứ Bát Tràng</h2>                <p>Lưu giữ giá trị văn hóa dân tộc không những góp phần mang lại sự thay đổi về kinh tế cho người dân nơi đây. Còn là sự tiếp nối nhiều thế hệ qua thời gian giữ gìn nghề cổ qua những sản phẩm gốm sứ. Sự đa dạng của những sản phẩm đó bằng nhiều hình thức, con đường khác nhau vẫn luôn góp phần tạo nên sức sống văn hóa của một quốc gia và mang đến những ý nghĩa giáo dục truyền thống sâu sắc. Qua bàn tay khéo léo của người nghệ nhân đã tạo ra những sản phẩm làm từ gốm men rạn, men hoa lam hay men ngọc,… Tất cả đều độc đáo và có những dấu ấn riêng biệt.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==4){
+                $('#background-image').attr("src","../images/backgroundchuaco.png");
+                $('#body-info_text').html(" <h2>Ngôi chùa cổ</h2>                <p>Chùa cổ người Việt ngày nay ngoài vai trò là nơi đón nhận nhu cầu tín ngưỡng, tâm linh của đông đảo Nhân dân mà còn đóng một số chức năng vai trò rất quan trọng khác như là điểm đến giúp cho ngành du lịch phát triển, tạo ra việc làm, thu nhập của bộ phận Nhân dân sống quanh khu di tích. Bên cạnh đó mỗi ngôi chùa cổ là một bảo tàng thu nhỏ để gìn giữ các giá trị văn hóa vật thể và phi vật thể quý, một không gian hội tụ bảo tồn những loại cây, hoa quý với môi trường trong lành, tĩnh mịch, không ồn ào.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==5){  $('#background-image').attr("src","../images/backgroundcahue.png");
+                $('#body-info_text').html(" <h2>Ca Huế</h2>                <p>Ca Huế được phát sinh vào khoảng thế kỷ thứ XVII, trở thành thú chơi tao nhã của các hoàng thân quốc thích, gia đình danh gia vọng tộc trong suốt thời gian dài khi Huế là thủ phủ xứ Đàng Trong, sau đó là kinh đô của cả nước dưới triều Nguyễn, đạt đến đỉnh cao từ thời Minh Mạng (1820-1840) đến thời Tự Đức (1848-1883).Đây là một trong ba thể loại nhạc thính phòng đạt trình độ phát triển bậc nhất trong kho tàng âm nhạc truyền thống Việt Nam, đứng thứ hai về bề dày lịch sử, và là thể loại duy nhất ra đời trong chốn cung đình. </p>")
+    }})
+    function checkbackground(){
+        if($('.slick-dots').children('.slick-active').index()==0){
+                $('#background-image').attr("src","../images/backgroundvanhoa.png");
+                $('#body-info_text').html(" <h2>Văn hoá Việt Nam</h2>                <p>54 dân tộc với những nền văn hóa phong phú và đa dạng trên tất cả các khía cạnh, có những phong tục đúng đắn, tốt đẹp từ lâu đời, có những lễ hội nhiều ý nghĩa sinh hoạt cộng đồng, những niềm tin bền vững trong tín ngưỡng, sự khoan dung trong tư tưởng giáo lý khác nhau của tôn giáo, 30 công viên quốc gia, 8 di sản vật thể, 13 di sản phi vật thể được UNESCO công nhận.Phong cảnh đa dạng của Việt Nam và sự phong phú của văn hóa làm cho nó trở thành một địa điểm đến hấp dẫn cho bất kỳ khách du lịch trong và ngoài nước.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==1){
+                $('#background-image').attr("src","../images/backgroundluanuoc.png");
+                $('#body-info_text').html(" <h2>Nông Nghiệp Trồng Lúa Nước</h2>                <p>Người Việt Nam đã gắn bó với cây lúa từ thuở sơ khai khi dân ta còn sử dụng những lưỡi cày bằng đồng để trồng trọt cho đến thế kỉ XXI hiện đại khi chúng ta đã bắt đầu áp dụng công nghệ hiện đại vào nghề trồng lúa nước. Chính vì vậy, nghề trồng lúa nước đã đi vào cuộc sống người dân ta, trở thành một phần trong cuộc sống của người Việt, đặc biệt là yếu tố trong văn hóa như tín ngưỡng, ngôn ngữ, tục lệ,...</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==2){
+                $('#background-image').attr("src","../images/backgroundaodai.png");
+                $('#body-info_text').html(" <h2>Tà Áo dài Việt Nam</h2>                <p>Áo dài Việt Nam với giá trị văn hóa, bản sắc thể hiện rõ nét về hình ảnh người phụ nữ Việt Nam. Qua nhiều thời kỳ phát triển, những tà áo dài không ngừng biến đổi trong đời sống đương đại, nhưng vẫn luôn khẳng định giá trị truyền thống, khơi dậy niềm tự hào, tôn lên vẻ đẹp thanh lịch, dịu dàng của người phụ nữ Việt Nam.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==3){
+                $('#background-image').attr("src","../images/backgroundgomsu.png");
+                $('#body-info_text').html(" <h2>Gớm Sứ Bát Tràng</h2>                <p>Lưu giữ giá trị văn hóa dân tộc không những góp phần mang lại sự thay đổi về kinh tế cho người dân nơi đây. Còn là sự tiếp nối nhiều thế hệ qua thời gian giữ gìn nghề cổ qua những sản phẩm gốm sứ. Sự đa dạng của những sản phẩm đó bằng nhiều hình thức, con đường khác nhau vẫn luôn góp phần tạo nên sức sống văn hóa của một quốc gia và mang đến những ý nghĩa giáo dục truyền thống sâu sắc. Qua bàn tay khéo léo của người nghệ nhân đã tạo ra những sản phẩm làm từ gốm men rạn, men hoa lam hay men ngọc,… Tất cả đều độc đáo và có những dấu ấn riêng biệt.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==4){
+                $('#background-image').attr("src","../images/backgroundchuaco.png");
+                $('#body-info_text').html(" <h2>Ngôi chùa cổ</h2>                <p>Chùa cổ người Việt ngày nay ngoài vai trò là nơi đón nhận nhu cầu tín ngưỡng, tâm linh của đông đảo Nhân dân mà còn đóng một số chức năng vai trò rất quan trọng khác như là điểm đến giúp cho ngành du lịch phát triển, tạo ra việc làm, thu nhập của bộ phận Nhân dân sống quanh khu di tích. Bên cạnh đó mỗi ngôi chùa cổ là một bảo tàng thu nhỏ để gìn giữ các giá trị văn hóa vật thể và phi vật thể quý, một không gian hội tụ bảo tồn những loại cây, hoa quý với môi trường trong lành, tĩnh mịch, không ồn ào.</p>")
+            }
+            if($('.slick-dots').children('.slick-active').index()==5){  $('#background-image').attr("src","../images/backgroundcahue.png");
+                $('#body-info_text').html(" <h2>Ca Huế</h2>                <p>Ca Huế được phát sinh vào khoảng thế kỷ thứ XVII, trở thành thú chơi tao nhã của các hoàng thân quốc thích, gia đình danh gia vọng tộc trong suốt thời gian dài khi Huế là thủ phủ xứ Đàng Trong, sau đó là kinh đô của cả nước dưới triều Nguyễn, đạt đến đỉnh cao từ thời Minh Mạng (1820-1840) đến thời Tự Đức (1848-1883).Đây là một trong ba thể loại nhạc thính phòng đạt trình độ phát triển bậc nhất trong kho tàng âm nhạc truyền thống Việt Nam, đứng thứ hai về bề dày lịch sử, và là thể loại duy nhất ra đời trong chốn cung đình. </p>")
+        }
+    }
+    setInterval(checkbackground,200)
+})
+</script>
+</html> 

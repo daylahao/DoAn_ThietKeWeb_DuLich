@@ -1,0 +1,199 @@
+.background{
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+#background1{
+    z-index: 1;
+    display: flex;
+}
+#background1-container{
+    position:absolute;
+    left: 0; right: 0;
+    width: 1920;
+    max-width: 100%;
+    height: 100vh;
+    justify-content: flex-end;
+    z-index: -1;
+    padding: 0 70px;
+}
+#background1-iconnext{
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    transform: rotate(-135deg);
+    cursor: pointer;
+}
+#background1-iconnext::before{
+    content: "Xem thêm";
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    left:10px;top:50px;bottom:0px;
+    transform: rotate(135deg);
+    color: white;
+    font-size: 1rem;
+    opacity: 1;
+    transition: all 0.25s ease-in-out ;
+    animation: xemthemani 1s ease-in-out 1;
+}
+@keyframes xemthemani {
+    0%{
+        opacity: 0;
+        left: -10px;top: 20px;bottom:0px;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        left:10px;top:50px;bottom:0px;
+    }
+}
+#background1-iconnext:hover::before{
+    left:10px;top:50px;bottom:0px;
+    opacity: 1;    font-size: 1.1rem;
+}
+
+#background1-iconnext::after{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    background-image: linear-gradient(135deg,rgba(255,255,255,0.6),rgba(255,255,255,0) 50%);
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    transition: width ease-in-out 0.25s, height ease-in-out 0.25s,opacity ease-in-out 0.25s;
+}
+#background1-iconnext:hover:after{
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+#background1-info{
+position: absolute;
+bottom: 500px;
+max-width: 100%;
+height: fit-content;
+max-height: 100%;
+color: white;
+top: calc(50% - 127px/2 - 43.5px);
+}
+#background1-info h1{
+width: 100%;
+max-width: 100%;
+font-weight: 500;
+font-size: 6rem;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#background1-info p {
+    width: 45%;
+    max-width: 100%;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.background-image{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -1;
+}
+#background1-overlay{
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 101vh;
+    max-width: 100%;
+    background: rgba(35, 34, 34, 0.52);
+}
+#background2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+}
+@media only screen and (max-width: 800px){
+    #background2-container_bandovn{
+        position: absolute;
+        z-index: -1;
+        opacity: 0.4;
+        width: 100%;
+        max-height: 100%;
+    }
+    #background2-container{
+        padding:0 40px;
+    }
+    pre{
+        line-height: 20px;
+    }
+
+}
+#background2-container{
+    z-index: 0;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+}
+#background2-container_div{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+}
+#background2-image{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -1;
+}
+#background2-overlay{
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background: rgba(0, 18, 23, 0.9);
+}
+#background2-info{
+margin: auto;
+width: 900px;
+max-width:100%;
+height: fit-content;
+font-style: normal;
+font-weight: 400;
+line-height: 30px;
+color: #FFFFFF;
+}
+#background2-info pre{
+    width: 100%;
+    max-width: 900px;
+    font-size: 1.3rem;
+    white-space: break-spaces;
+}
+#background2-container_bandovn{
+    width: 500px;
+    max-width: 50%;
+    margin: auto;
+    right: 0;
+    /* top: calc(50% - 696px/2 + 52px);  */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

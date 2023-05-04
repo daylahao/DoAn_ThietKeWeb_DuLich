@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/LOGO.png" >
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,500&display=swap" rel="stylesheet"> -->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <link href="../icon/fontawesome-free-6.2.0-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/dichvu.css">
+    <link rel="stylesheet" href="../font/Montserrat fontface/Montserrat-Font.css">
+    <link rel="stylesheet" type="text/css" href="../js/slick-1.8.1/slick/slick.css">
+    <script type="text/javascript" src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <title>BOOKING</title>
+</head>
+
+<body style="flex-direction:column;height: 100vh;">
+    <div class="width-tieuchuan">
+        <div id="nav" >
+            <a href="../index.html" id="nav-logo"><img alt="Logo" src="../images/LOGO.png"></a>
+            <ol id="nav-list">
+                <a id="nav-noidedi" class="nav-items" href="../html/noidedi.html">NƠI ĐỂ ĐI</a>
+                <a id="nav-vanhoa" class="nav-items" href="../html/vanhoa.html">VĂN HOÁ</a>
+                <a id="nav-amthuc" class="nav-items" href="../html/amthuc.html">ẨM THỰC</a>
+                <a id="nav-dichvu" class="nav-items active" href="../html/dichvu.html">BOOKING</a>
+                <div  id="nav-meodulich_div" class="nav-items">
+                    <a id="nav-meodulich-title" href="../html/meodulich.html">MẸO DU LỊCH <i class="fa-solid fa-caret-down"></i></a>
+                    <ul id="nav-meodulich_list" >
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#1">Mẹo Cần Khi Đi Du Lịch</a></li>
+                        <li class="nav-meodulich_item"><a href="../html/meodulich.html#2">Mẹo Du Lịch An Toàn</a></li>
+                    </ul>
+                </div>
+            </ol>
+            <div id="nav-search"><i id="nav-search_icon"class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Tìm Kiếm" autocomplete="no" ></div>
+        </div>
+        </div>
+    <div id="background-succes">
+        <div id="background-succes_container">
+        <img src="../images/LOGO.png" alt="Logo" id="background-succes_logo">
+        <span><i class="fa-solid fa-check"></i>
+        <p>Quý khách đã đặt vé thành công. Xin vui lòng kiểm tra email để xác nhận và tiến hành thanh toán (nếu có). 
+            Cảm ơn quý khách đã sử dụng dịch vụ!</p></span>
+        <button id="background-succes_btn">Đồng Ý</button>
+    </div>
+</div>  
+    <div id="background">
+        <img id="background-image" class="background-image" src="../images/BackgroundBOOKING.png">
+        <div id="backgroundoverlay"></div>
+    </div>
+    <div id="container" class="width-tieuchuan" style="z-index: 0;">
+        <div id="container-head">
+            <h2 id="container-head_title"><i class="fa-sharp fa-solid fa-plane-up"></i> ĐẶT VÉ MÁY BAY</h2>
+            <div id="container-head_radio">
+                <div id="head_radio_khuhoidiv"><input name="radio-ve"id="head_radio-khuhoi"type="radio" value="1"><label for="head_radio-khuhoi" >Một chiều</label></div>
+                <div id="head_radio-motchieudiv"><input name="radio-ve"id="head_radio-motchieu"type="radio" value="2"><label for="head_radio-motchieu">Khứ hồi</label></div>
+                <div id="head_radio-multidiv"><input name="radio-ve"id="head_radio-multi"type="radio" value="3"><label for="head_radio-multi" >Multi-city</label></div>
+            </div>
+        </div>
+        <div id="container-body">
+            <div id="container-body_row1">
+                <div id="row1-khoihanh">
+                <label for="row1-khoihanh_sel" id="row1-khoihanh_title" class="containerbody-tilte_text">Khởi Hành</label>
+                <div id="row1-khoihanh_input" class="containerbody-content-text">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <select id="row1-khoihanh_sel" name="row1-khoihanh_sel"class="containerbody-content-text">
+                    <option value="0" disabled selected style="display:none">Chọn địa điểm khởi hành</option>
+                    <option value="1">Hà Nội (HAN), Việt Nam</option>
+                    <option value="2">Tp. Hồ Chí Minh (SGN), Việt Nam</option>
+                    <option value="3">Đà Nẵng (DAD), Việt Nam</option>
+                    <option value="4">Phú Quốc (PQC), Việt Nam</option>
+                    <option value="5"> Trang (CXR), Việt Nam</option>
+                    <option value="6">Buôn Ma Thuột (BMV), Việt Nam</option>
+                    <option value="7">Cà Mau (CAH), Việt Nam</option>
+                    <option value="8">Cần Thơ (VCA), Việt Nam</option>
+                    <option value="9">Chu Lai (VCL), Việt Nam</option>
+                    <option value="10">Côn Đảo (VCS), Việt Nam</option>
+                </select></div>
+                </div>
+                <div id="row1-swap"class="containerbody-content-text">
+                <div id="row1-trans"><i id="row1-trans_icon"class="fa-solid fa-right-left"></i></div>
+                </div>
+                <div id="row1-den">
+                <label for="row1-den_sel" id="row1-den_title" class="containerbody-tilte_text">Đến</label>
+                <div id="row1-den_input" class="containerbody-content-text">
+                    <i class="fa-solid fa-plane-arrival"></i>
+                <select  id="row1-den_sel" name="row1-den_sel" class="containerbody-content-text">
+                    <option value="0" disabled selected style="display:none">Chọn địa điểm đến</option>
+                    <option value="1">Hà Nội (HAN), Việt Nam</option>
+                    <option value="2">Tp. Hồ Chí Minh (SGN), Việt Nam</option>
+                    <option value="3">Đà Nẵng (DAD), Việt Nam</option>
+                    <option value="4">Phú Quốc (PQC), Việt Nam</option>
+                    <option value="5"> Trang (CXR), Việt Nam</option>
+                    <option value="6">Buôn Ma Thuột (BMV), Việt Nam</option>
+                    <option value="7">Cà Mau (CAH), Việt Nam</option>
+                    <option value="8">Cần Thơ (VCA), Việt Nam</option>
+                    <option value="9">Chu Lai (VCL), Việt Nam</option>
+                    <option value="10">Côn Đảo (VCS), Việt Nam</option>
+                </select></div> 
+            </div>
+            </div>
+            <div id="container-body_row2">
+                <div id="row2-date">
+                    <label for="row2-date_input" id="row2-date_title" class="containerbody-tilte_text">NGÀY KHỞI HÀNH:</label>
+                    <input type="date" placeholder="Nhập ngày" id="row2-date_input" class="containerbody-content-text">
+                </div>
+                <div id="row2-soluong">
+                    <label for="row2-soluong_input"id="row2-soluong-title" class="containerbody-tilte_text">SỐ LƯỢNG:</label>
+                    <span><input type="number" value="1"  min="0" oninput="validity.valid||(value='')" id="row2-soluong_input"class="containerbody-content-text" ><label for="row2-soluong_input" class="containerbody-content-text">Người</label></span>
+                </div>
+                <div id="row2-hanghangkhong">
+                    <label for="row2-hanghangkhong_input" id="row2-hanghangkhong_title" class="containerbody-tilte_text">HÃNG HÀNG KHÔNG:</label>
+                    <select id="row2-hanghangkhong_input" class="containerbody-content-text" onfocus="selonforcus(this)" onblur="selonblur(this)">
+                        <option value="1">Vietnam Airlines</option>
+                        <option value="2">Vietjet Air</option>
+                        <option value="3">Bamboo Airways</option>
+                        <option value="4">Pacific Airlines</option>
+                        <option value="4">Viettravel Airlines</option>
+                    </select>
+                </div>
+                <div id="row2-rank">
+                    <label for="row2-rank_input" id="row2-rank_title" class="containerbody-tilte_text">HẠNG:</label>
+                    <select id="row2-rank_input" class="containerbody-content-text" onfocus="selonforcus(this)" onblur="selonblur(this)">
+                        <option value="1">Phổ Thông</option>
+                        <option value="2">Phổ thông đặc biệt</option>
+                        <option value="3">Thương gia</option>
+                        <option value="4">Hạng nhất</option>
+                    </select>
+                </div>
+            </div>
+            <div id="container-body_row3">
+                <div id="row3-email">
+                    <label for="row3-email_input" id="row3-email_title" class="containerbody-tilte_text">EMAIL: </label>
+                    <input type="email" id="row3-email_input"placeholder="Thông tin xác nhận đặt vé sẽ được gửi đến Email của bạn!" class="containerbody-content-text">
+                </div>
+                <div id="row3-sdt">
+                    <label for="row3-sdt_input" id="row3-sdt_title" class="containerbody-tilte_text" >SỐ ĐIỆN THOẠI: </label>
+                    <input type="tel" id="row3-sdt_input" class="containerbody-content-text" placeholder="Nhập số điện thoại">
+                </div>
+            </div>
+        </div>
+        <div id="container-money" class="containerbody-tilte_text"><i id="container-err_text">Vui lòng điền đầy đủ thông tin!</i><span>Giá Vé:<b style="margin: 0 10px;"id="container-money_gia">0</b></span></div>
+        <div id="container-foot">
+            <button type="submit" id="footer-btn_datve" class="containerbody-tilte_text">Đặt Vé</button>
+        </div>
+        </div>
+        <div id="nav-footer">
+            <a id="nav-footer_link">&copy; Được thiết kế bởi nhóm 3</a>
+            <ul id="nav-footer_list">
+                <li><a href="mailto:n20dcpt021@student.ptithcm.edu.vn">Đỗ Hùng Hảo-N20DCPT021</a></li>
+                <li><a href="mailto:n20dcpt036@student.ptithcm.edu.vn">Lê Thị Cẩm Ly-N20DCQPT036</a></li>
+                <li><a href="mailto:n20dcpt041@student.ptithcm.edu.vn">Đặng.N Uyển My-N20DCQPT041</a></li>
+                <li><a href="mailto:n20dcpt043@student.ptithcm.edu.vn">Lê Nhật Nam-N20DCQPT043</a></li>
+                <li><a href="mailto:n20dcpt062@student.ptithcm.edu.vn">T.L Ngọc Quyền-N20DCQPT062</a></li>
+            </ul>
+    </div>
+</body>
+<script src="../js/hidden_nav.js"></script>
+<script>
+    function selonforcus(e){
+        e.style.outline="solid #006748";
+    }
+    function selonblur(e){
+        e.style.outline="none";
+    }
+     $(document).ready(function(){
+        var tien=0;
+        $("#container-money_gia").html(tien);
+        function tinhtien(){
+          tien=(($("input[name='radio-ve']:checked").val()*1+$("#row2-hanghangkhong_input").val()*1+$("#row2-rank_input").val()*1)*234000)*$("#row2-soluong_input").val()*1
+          console.log($("input[name='radio-ve']:checked").val()+"-"+$("#row2-hanghangkhong_input").val()+"-"+$("#row2-rank_input").val()+"-"+$("#row2-soluong_input").val());
+          if(tien>=0)
+          return tien;
+        }
+        $("input[name='radio-ve']").click(function(){
+            $("input[name='radio-ve']").css("outline","none");
+            $("#container-money_gia").html(tinhtien());
+        })
+        $('input').focus(function(){
+            if($(this).prop("type")!="radio"&&$(this).attr('placeholder')!="Tìm Kiếm")
+            {$(this).css("outline","solid #006748");
+            $("#container-money_gia").html(tinhtien());}
+        })
+        $('input').blur(function(){
+            $(this).css("outline","none");
+            $("#container-money_gia").html(tinhtien());
+        })
+        $('select').mouseup(function(){$("#container-money_gia").html(tinhtien())})
+        $('select').focus(function(){
+            $(this).parent('.containerbody-content-text').css("outline","solid #006748");
+         
+        })
+        $('select').blur(function(){
+            $(this).parent('.containerbody-content-text').css("outline","none");
+            $("#container-money_gia").html(tinhtien());
+        })
+        $('#footer-btn_datve').click(function(){
+            $("input[name='radio-ve']").css("outline","none");
+            $('input').css("outline","none");
+            $('select').parent('.containerbody-content-text').css("outline","none");
+            let empty=0;
+            var now= new Date;
+            var nowday= now.getDate();
+            var nowmonth= now.getMonth()+1;
+            var nowyear=now.getFullYear();
+            now=(nowyear)+"-"+(nowmonth)+"-"+(nowday);
+            var idate=$("#row2-date_input").val().split("-");
+            if($("input[name='radio-ve']:checked").val()==null){
+                $("input[name='radio-ve']").css("outline","solid red");
+                empty++;
+            }
+            if($("#row1-khoihanh_sel").val()==null){
+                $("#row1-khoihanh_sel").parent().css("outline","solid red");
+                empty++;
+            }
+            if($("#row1-den_sel").val()==null){
+                $("#row1-den_sel").parent().css("outline","solid red");
+                empty++;
+            }
+            if($("#row1-khoihanh_sel").val()==$("#row1-den_sel").val()){
+                $("#row1-den_sel").parent().css("outline","solid red");
+                $("#row1-khoihanh_sel").parent().css("outline","solid red");
+                empty++;
+            }
+            if(idate[0]==nowyear){
+                if(idate[1]<nowmonth)
+                {  
+                    $("#row2-date_input").css("outline","solid red");
+                    empty++;
+                }
+                if(idate[2]<nowday&&idate[1]==nowmonth){
+                    $("#row2-date_input").css("outline","solid red");
+                    empty++;
+                }
+            }
+            if(idate[0]<nowyear){
+                $("#row2-date_input").css("outline","solid red");
+                    empty++;
+            }
+            if($("#row2-soluong_input").val()==null||$("#row2-soluong_input").val()<1){
+                $("#row2-soluong_input").css("outline","solid red");
+                  empty++;
+            }
+            if($("#row3-email_input").val()==""){
+                $("#row3-email_input").css("outline","solid red");
+                  empty++;
+            }
+            if($("#row3-sdt_input").val()==""){
+                $("#row3-sdt_input").css("outline","solid red");
+                  empty++;
+            }
+            if(empty<1){
+                $("#background-succes").css("display","flex");
+                $("#container-err_text").css("visibility","hidden");
+            }
+            else {
+                $("#container-err_text").css("visibility","visible")
+            }
+        })
+        $("#background-succes_btn").click(function(){ $("#background-succes").css("display","none");})
+        $("#row1-swap").click(function(){
+            var tmp=$("#row1-khoihanh_sel").val();
+            $("#row1-khoihanh_sel").val($("#row1-den_sel").val());
+            $("#row1-den_sel").val(tmp);
+        })
+    })    
+
+</script>
+</html>
